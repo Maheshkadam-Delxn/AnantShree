@@ -153,12 +153,7 @@ const AmenitiesSection = () => {
                 ).slice(0, 6)}
               </div>
               
-              <a
-                href="#schedule-visit"
-                className="inline-flex items-center bg-[#0a3a5a] text-white px-6 py-3 rounded-lg hover:bg-[#0a3a5a]/90 transition-colors duration-300 mt-8 self-start"
-              >
-                <span>Explore All Amenities</span>
-              </a>
+            
             </div>
           </div>
         </div>

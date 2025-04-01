@@ -2,9 +2,9 @@
 import building from "../../public/img/DAY 002.jpg"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link1 from 'next/link';
 import { ArrowRight, MapPin, Home } from 'lucide-react';
-
+import { Link } from "react-scroll";
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
   
@@ -71,18 +71,18 @@ const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row justify-center gap-4 mt-2">
-            <Link href="/floor-plans">
-              <button className="group px-8 py-4 bg-[#d4af37] hover:bg-[#c9a431] text-white rounded-md font-medium transition-all duration-300 shadow-lg w-full sm:w-auto flex items-center justify-center">
+            <Link to="floorplan" smooth={true}>
+              <button className="cursor-pointer group px-8 py-4 bg-[#d4af37] hover:bg-[#c9a431] text-white rounded-md font-medium transition-all duration-300 shadow-lg w-full sm:w-auto flex items-center justify-center">
                 <span>View Floor Plans</span>
                 <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
-            <Link href="/download-brochure">
+            <Link1 href="/download-brochure">
               <button className="group px-8 py-4 border-2 border-[#d4af37] text-white hover:bg-white/5 rounded-md font-medium transition-all duration-300 shadow-lg w-full sm:w-auto flex items-center justify-center">
                 <span>Download Brochure</span>
                 <ArrowRight size={18} className="ml-2 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all" />
               </button>
-            </Link>
+            </Link1>
           </div>
           
           {/* Property Features */}
