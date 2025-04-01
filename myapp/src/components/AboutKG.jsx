@@ -34,15 +34,14 @@ const AboutKherGroup = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Our Journey of Excellence</span>
+          <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Collaborating for Excellence</span>
           <h2 className="text-4xl md:text-5xl font-light text-[#0a3a5a] mt-3 mb-6 leading-tight">
             About Kher Group
           </h2>
           <div className="w-24 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
           
           <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
-            For over three decades, Kher Group has been redefining premium living spaces 
-            through innovative design, sustainable practices, and unwavering commitment to quality.
+          Kher Group, Redefining Quality in Real Estate.
           </p>
         </div>
 
@@ -51,23 +50,27 @@ const AboutKherGroup = () => {
           <div className="flex flex-col justify-center">
             <h3 className="text-3xl font-light text-[#0a3a5a] mb-6">Our Vision</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              At Kher Group, we envision creating living spaces that harmoniously blend luxury, functionality, 
-              and sustainability. Our developments are designed to enrich lives while respecting the 
-              environment and community around us.
+            With a legacy of excellence and trust, Kher Group 
+has been a renowned name in the Pune&apos;s real estate 
+industry, delivering world-class residential and 
+commercial projects across Pune. Known for their 
+innovative designs, quality construction, and 
+customer-centric approach, Kher Group has 
+redefined urban living for over two decades.
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            {/* <p className="text-gray-600 mb-8 leading-relaxed">
               From conceptualization to completion, every project reflects our dedication to 
               craftsmanship, attention to detail, and innovative solutions that address the evolving 
               needs of modern homeowners.
-            </p>
+            </p> */}
             <div className="grid grid-cols-2 gap-6">
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-[#0a3a5a]/5 flex items-center justify-center mr-4">
                   <Calendar size={20} className="text-[#d4af37]" />
                 </div>
                 <div>
-                  <span className="block text-2xl font-medium text-[#0a3a5a]">1989</span>
-                  <span className="text-gray-500 text-sm">Established</span>
+                  <span className="block text-2xl font-medium text-[#0a3a5a]">30+</span>
+                  <span className="text-gray-500 text-sm">Years of Industry Experience</span>
                 </div>
               </div>
               <div className="flex items-center">
@@ -75,8 +78,17 @@ const AboutKherGroup = () => {
                   <Building size={20} className="text-[#d4af37]" />
                 </div>
                 <div>
-                  <span className="block text-2xl font-medium text-[#0a3a5a]">120+</span>
+                  <span className="block text-2xl font-medium text-[#0a3a5a]">30+</span>
                   <span className="text-gray-500 text-sm">Projects Delivered</span>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-[#0a3a5a]/5 flex items-center justify-center mr-4">
+                  <Building size={20} className="text-[#d4af37]" />
+                </div>
+                <div>
+                  <span className="block text-2xl font-medium text-[#0a3a5a]">12L+</span>
+                  <span className="text-gray-500 text-sm">Sq.ft. of Construction</span>
                 </div>
               </div>
             </div>
@@ -155,7 +167,7 @@ const AboutKherGroup = () => {
 
         {/* Legacy and Achievements */}
      
-        <div className="mb-24 px-4 sm:px-6">
+        {/* <div className="mb-24 px-4 sm:px-6">
       <div className="text-center mb-16">
         <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Our Proud Journey</span>
         <h3 className="text-3xl font-light text-[#0a3a5a] mt-3 mb-6">Legacy and Achievements</h3>
@@ -163,19 +175,15 @@ const AboutKherGroup = () => {
       </div>
       
       <div className="relative">
-        {/* Timeline line - hidden on mobile, visible on md screens and up */}
         <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#0a3a5a] to-[#d4af37]/30"></div>
         
-        {/* Timeline line - visible only on mobile, positioned on left side */}
         <div className="md:hidden absolute left-4 top-0 h-full w-0.5 bg-gradient-to-b from-[#0a3a5a] to-[#d4af37]/30"></div>
         
-        {/* Achievement items */}
         <div className="space-y-16 relative">
           {achievements.map((achievement, index) => (
             <div key={index} className={`flex flex-col md:items-center ${
               index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
             }`}>
-              {/* Content section */}
               <div className={`
                 w-full pl-12 md:pl-0 
                 md:w-1/2 
@@ -186,23 +194,20 @@ const AboutKherGroup = () => {
                 <p className="text-gray-600">{achievement.description}</p>
               </div>
               
-              {/* Timeline dot for desktop */}
               <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full border-4 border-white bg-[#d4af37] items-center justify-center z-10">
                 <Award size={16} className="text-white" />
               </div>
               
-              {/* Timeline dot for mobile */}
               <div className="md:hidden absolute left-4 transform -translate-x-1/2 w-8 h-8 rounded-full border-3 border-white bg-[#d4af37] flex items-center justify-center z-10">
                 <Award size={12} className="text-white" />
               </div>
               
-              {/* Empty div for desktop layout */}
               <div className="hidden md:block w-full md:w-1/2"></div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </div> */}
         
 
         {/* Group Companies Logos */}

@@ -23,10 +23,11 @@ const AboutProject = () => {
           <div className="w-24 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
           
           <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
-            Our project seamlessly blends architectural excellence with contemporary comfort, 
-            creating living spaces that honor tradition while embracing innovation. 
-            Each residence is thoughtfully designed to provide an unparalleled living experience 
-            that stands the test of time.
+          This is more than just a building—it&aps;s a 
+statement of elegance and sophistication. With 
+its contemporary architecture and thoughtful 
+design, this project stands as a testament to 
+luxury living in the heart of Kothrud.
           </p>
         </div>
         

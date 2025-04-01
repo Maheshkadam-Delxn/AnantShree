@@ -197,7 +197,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 
-                <div className="mt-10">
+                {/* <div className="mt-10">
                   <h4 className="text-[#d4af37] text-sm uppercase tracking-widest font-medium mb-4">Working Hours</h4>
                   <div className="space-y-2">
                     <div className="flex justify-between">
@@ -213,7 +213,7 @@ const ContactUs = () => {
                       <span className="text-white">Closed</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

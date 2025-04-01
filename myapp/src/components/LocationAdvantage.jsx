@@ -6,12 +6,15 @@ const LocationAdvantage = () => {
   const [activeTab, setActiveTab] = useState("education");
 
   const keyLandmarks = [
-    { name: "Vanaz Metro Station", distance: "1.2 km", time: "5 min" },
-    { name: "Sahyadri Hospital", distance: "2.5 km", time: "8 min" },
-    { name: "Kothrud IT Park", distance: "3.2 km", time: "10 min" },
-    { name: "Chandni Chowk", distance: "4.1 km", time: "12 min" },
+    { name: "Vanaz Metro Station", distance: "0.3 km", time: "5 min" },
+    { name: "Sahyadri Hospital", distance: "0.4 km", time: "8 min" },
+    { name: "New India School", distance: "0.9 km", time: "10 min" },
+    { name: "Chandni Chowk", distance: "2.0 km", time: "12 min" },
+    { name: "MIT College Kothrud", distance: "2.0 km", time: "15 min" },
     { name: "Pune University", distance: "5.5 km", time: "15 min" },
-    { name: "Hinjewadi IT Hub", distance: "12 km", time: "25 min" }
+   
+    { name: "Hinjewadi IT Hub", distance: "15 km", time: "25 min" },
+    { name: "Pune-Mumbai Expressway", distance: "20 km", time: "30 min" }
   ];
 
   return (

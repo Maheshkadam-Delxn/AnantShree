@@ -12,46 +12,75 @@ const FloorPlans = () => {
     elegance: {
       title: "Elegance",
       type: "2 BHK",
-      carpetArea: "825 sq.ft.",
-      superArea: "1050 sq.ft.",
+      carpetArea: "700.00 sq.ft.",
+      superArea: "700.00 sq.ft.",
       price: "₹95L onwards",
       image: "/img/interior.jpg",
       dimensions: [
-        { room: "Master Bedroom", size: "12' x 14'" },
-        { room: "Second Bedroom", size: "10' x 12'" },
-        { room: "Living & Dining", size: "16' x 18'" },
-        { room: "Kitchen", size: "8' x 10'" },
-        { room: "Balcony", size: "6' x 10'" },
-        { room: "Master Bathroom", size: "6' x 8'" },
-        { room: "Common Bathroom", size: "5' x 8'" }
+        { room: "Master Bedroom", size: "12'3 x 10'0" },
+        { room: "Second Bedroom", size: "10'6 x 12'0" },
+        { room: "Living & Dining", size: "14' x 10'5" },
+        { room: "Kitchen", size: "14'8 x 8'2" },
+        { room: "Balcony", size: "4'4 x 10'5" },
+        { room: "Toilet", size: "7'0 x 4'5" },
       ]
     },
-  
-    majestic: {
-      title: "Majestic",
-      type: "3 BHK",
-      carpetArea: "1350 sq.ft.",
-      superArea: "1625 sq.ft.",
+    royale: {
+      title: "Royale",
+      type: "2 BHK",
+      carpetArea: "704.00 sq.ft.",
+      superArea: "704.00 sq.ft.",
       price: "₹1.45Cr onwards",
       image: "/img/interiorr.jpg",
       dimensions: [
-        { room: "Master Bedroom", size: "16' x 18'" },
-        { room: "Second Bedroom", size: "12' x 14'" },
-        { room: "Third Bedroom", size: "12' x 12'" },
-        { room: "Living & Dining", size: "22' x 24'" },
-        { room: "Kitchen", size: "12' x 14'" },
-        { room: "Balcony (Primary)", size: "8' x 12'" },
-        { room: "Balcony (Secondary)", size: "6' x 8'" },
-        { room: "Master Bathroom", size: "8' x 10'" },
-        { room: "Common Bathroom", size: "7' x 9'" },
-        { room: "Guest Bathroom", size: "5' x 8'" }
+        { room: "Master Bedroom", size: "12'3 x 10'0" },
+        { room: "Second Bedroom", size: "10'6 x 12'0" },
+        { room: "Living & Dining", size: "14' x 10'5" },
+        { room: "Kitchen", size: "14'8 x 8'2" },
+        { room: "Balcony", size: "4'4 x 10'5" },
+        { room: "Toilet", size: "7'0 x 4'5" },
       ]
-    }
+    },
+    grande: {
+      title: "Grande",
+      type: "2 BHK",
+      carpetArea: "751.00 sq.ft.",
+      superArea: "751.00 sq.ft.",
+      price: "₹1.45Cr onwards",
+      image: "/img/interiorr.jpg",
+      dimensions: [
+        { room: "Master Bedroom", size: "12'3 x 10'0" },
+        { room: "Second Bedroom", size: "10'6 x 12'0" },
+        { room: "Living & Dining", size: "14' x 10'5" },
+        { room: "Kitchen", size: "14'8 x 8'2" },
+        { room: "Balcony", size: "4'4 x 10'5" },
+        { room: "Toilet", size: "7'0 x 4'5" },
+      ]
+    },
+    majestic: {
+      title: "Majestic",
+      type: "3 BHK",
+      carpetArea: "865.00 sq.ft.",
+      superArea: "865.00 sq.ft.",
+      price: "₹1.45Cr onwards",
+      image: "/img/interiorr.jpg",
+      dimensions: [
+        { room: "Master Bedroom", size: "14'0 x 10'6" },
+        { room: "Second Bedroom", size: "10'6 x 11'5" },
+        { room: "Living & Dining", size: "14'10 x 10'5" },
+        { room: "Kitchen", size: "15'3 x 8'2" },
+        { room: "Balcony", size: "4'4 x 10'5" },
+        { room: "Toilet", size: "7'0 x 4'5" },
+      ]
+    },
+  
   };
 
   // Tabs configuration
   const tabs = [
     { id: 'elegance', label: 'Elegance', type: '2 BHK' },
+    { id: 'royale', label: 'Royale', type: '2 BHK' },
+    { id: 'grande', label: 'Grande', type: '2 BHK' },
     { id: 'majestic', label: 'Majestic', type: '3 BHK' },
   ];
 

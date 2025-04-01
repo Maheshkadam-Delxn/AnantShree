@@ -18,13 +18,18 @@ const AmenitiesSection = () => {
     lifestyle: [
       {
         icon: <Building size={24} />,
+        title: "Spacious & Elegant Layouts",
+        description: "Well-planned layouts with premium finishes ensuring comfort and luxury."
+      },
+      {
+        icon: <Building size={24} />,
         title: "Grand Entrance Lobby",
         description: "Impressive double-height lobby with designer lighting, premium marble flooring, and professional concierge services."
       },
       {
-        icon: <ArrowUp size={24} />,
-        title: "Lift with Power Backup",
-        description: "High-speed elevators with elegant interiors, complete power backup, and smart access controls ensuring seamless mobility."
+        icon: <Building size={24} />,
+        title: "Premium Fittings & Fixtures",
+        description: "Ultra-modern fittings and fixtures for an elegant living experience."
       },
       {
         icon: <Building size={24} />,
@@ -39,7 +44,7 @@ const AmenitiesSection = () => {
         description: "State-of-the-art rainwater collection system that conserves water resources while reducing utility costs."
       },
       {
-        icon: <TreePalm  size={24} />,
+        icon: <TreePalm size={24} />,
         title: "Eco-Friendly Features",
         description: "Energy-efficient design with solar panels, LED lighting throughout common areas, and sustainable construction materials."
       }
@@ -47,7 +52,7 @@ const AmenitiesSection = () => {
     security: [
       {
         icon: <Camera size={24} />,
-        title: "Security Systems",
+        title: "Worldclass Security",
         description: "Advanced 24/7 surveillance with CCTV monitoring, secure access controls, and smart video door phones for complete peace of mind."
       },
       {
@@ -65,7 +70,7 @@ const AmenitiesSection = () => {
         <div className="mb-16 text-center">
           <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Luxury & Convenience</span>
           <h2 className="text-4xl md:text-5xl font-light text-[#0a3a5a] mt-3 mb-6 leading-tight">
-            Premium Amenities
+            Project Amenities
           </h2>
           <div className="w-24 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
           

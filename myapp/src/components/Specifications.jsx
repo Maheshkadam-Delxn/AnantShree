@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Building2, Snowflake, Dumbbell, Bus, Smartphone, Paintbrush, DoorOpen, LayoutGrid, ChefHat, Droplets, Zap, Shield } from 'lucide-react';
+import { ChevronDown, ChevronUp,Move,Package, Building2, Snowflake, Dumbbell, Bus, Smartphone, Paintbrush, DoorOpen, LayoutGrid, ChefHat, Droplets, Zap, Shield } from 'lucide-react';
 
 const SpecificationsSection = () => {
   // State to track which accordion items are open
@@ -30,23 +30,21 @@ const SpecificationsSection = () => {
       title: 'Structure & Masonry',
       icon: <Building2 size={22} />,
       details: [
-        'RCC framed structure designed for seismic zone compliance',
-        'External walls with premium quality bricks and thermal insulation',
-        'Internal walls with AAC blocks for better sound insulation',
-        'Waterproofing treatment in wet areas and terraces',
-        'Weather-resistant exterior paint for lasting durability'
+        'Earthquake-resistant RCC framed structure',
+        'External walls: 6” AAC blocks',
+        'Internal walls: 4” AAC blocks',
+        'Internal POP Gypsum plaster',
+        'External sand-faced plaster'
       ]
     },
     {
-      id: 'doors',
+      id: 'doors_windows',
       title: 'Doors & Windows',
       icon: <DoorOpen size={22} />,
       details: [
-        'Main door: Premium teak wood frame with designer veneer finish',
-        'Internal doors: Engineered wood with laminate finish and quality hardware',
-        'Windows: UPVC/aluminum frames with double glazed glass for sound insulation',
-        'Balcony doors: Sliding UPVC/aluminum with toughened glass',
-        'Premium quality architectural hardware from renowned brands'
+        'Main door: Elegant laminate finish fireproof flush doors',
+        'Bathroom doors: Waterproof marine laminate finished doors',
+        'Aluminum section windows with mosquito nets & safety grills'
       ]
     },
     {
@@ -54,12 +52,9 @@ const SpecificationsSection = () => {
       title: 'Flooring',
       icon: <LayoutGrid size={22} />,
       details: [
-        'Living & Dining: Premium imported marble/vitrified tiles',
-        'Bedrooms: Engineered wooden flooring/premium vitrified tiles',
-        'Kitchen: Anti-skid vitrified tiles',
-        'Bathrooms: Designer ceramic tiles',
-        'Balconies: Weather-resistant ceramic tiles',
-        'Staircase & lobbies: Premium marble flooring'
+        '3x3 Marbonite finished tiles',
+        'Balcony & terrace: Anti-skid tiles with skirting',
+        'ISI standardized tiles from brands like Asian, Nitco, Johnson'
       ]
     },
     {
@@ -67,12 +62,8 @@ const SpecificationsSection = () => {
       title: 'Kitchen',
       icon: <ChefHat size={22} />,
       details: [
-        'Modular kitchen with premium countertops',
-        'Designer ceramic tile dado up to 2 feet above counter',
-        'Stainless steel single bowl sink with premium faucet',
-        'Provision for water purifier, refrigerator, and microwave',
-        'Adequate electrical points for kitchen appliances',
-        'Premium quality CP fittings from leading brands'
+        'Black granite platform with steel sink',
+        'Electrical points for water purifier and exhaust fan'
       ]
     },
     {
@@ -80,13 +71,9 @@ const SpecificationsSection = () => {
       title: 'Bathrooms',
       icon: <Droplets size={22} />,
       details: [
-        'Premium sanitary ware from leading brands',
-        'CP fittings from renowned manufacturers',
-        'Designer ceramic tile dado up to door height',
-        'Concealed plumbing with premium quality CPVC/UPVC pipes',
-        'Provision for geysers in all bathrooms',
-        'Anti-skid flooring for safety',
-        'Modern shower panels in master bathrooms'
+        'Tiles from Asian, Johnson, Kajaria with exclusive color & design',
+        'Jaqua, Kohler & similar high-quality CP fittings',
+        'CPVC water supply lines & UPVC external drainage'
       ]
     },
     {
@@ -94,13 +81,12 @@ const SpecificationsSection = () => {
       title: 'Electrical',
       icon: <Zap size={22} />,
       details: [
-        'Concealed copper wiring with modular switches',
-        'MCB distribution board with safety features',
-        'Adequate light points, power points, and TV/telephone outlets',
-        'Provision for air conditioners in all bedrooms and living area',
-        'USB charging points in living area and master bedroom',
-        '100% power backup for common areas and essential services',
-        'Energy-efficient lighting in common areas'
+        'Concealed copper wiring',
+        'Adequate electrical points in all rooms',
+        'Switches of Legrand make',
+        'Electrical wires of Polycab, Finolex & similar brands',
+        'TV & telephone connections in the living room & master bedroom',
+        'AC provisions in all bedrooms'
       ]
     },
     {
@@ -108,12 +94,8 @@ const SpecificationsSection = () => {
       title: 'Painting',
       icon: <Paintbrush size={22} />,
       details: [
-        'Interior: Premium emulsion paint with smooth finish',
-        'Exterior: Weather-resistant, high-quality exterior paint',
-        'Doors and frames: Durable enamel paint/polish',
-        'Textured paint in designated common areas',
-        'Anti-fungal paint in bathrooms and kitchens',
-        'Eco-friendly, low VOC paints for better indoor air quality'
+        'External: Apex paint',
+        'Internal: Royal emulsion paint'
       ]
     },
     {
@@ -121,13 +103,35 @@ const SpecificationsSection = () => {
       title: 'Security',
       icon: <Shield size={22} />,
       details: [
-        'CCTV surveillance at main entrance, lobbies, and common areas',
-        'Video door phone for each apartment',
-        'Multi-tier security with trained personnel',
-        'Access-controlled main entrance',
-        'Secure fire alarm system with smoke detectors',
-        'Intercom facility connecting all apartments to main security',
-        'Burglar alarm provision in each apartment'
+        'Video door phone',
+        'Access control system',
+        'CCTV cameras for entire plot areas',
+        'Security cabin with intercom connectivity to each flat'
+      ]
+    },
+    {
+      id: 'lift',
+      title: 'Lift',
+      icon: <Move size={22} />,
+      details: [
+        'Lifts from OTIS, OMEGA, KONE with power backup'
+      ]
+    },
+    {
+      id: 'ancillary',
+      title: 'Ancillary Facilities',
+      icon: <Package size={22} />,
+      details: [
+        'Nameplates for each flat',
+        'Name board & postal boxes on ground floor',
+        'Paper & milk baskets at the main entrance of each flat',
+        'Decorative entrance lobby with adequate seating & lighting',
+        'Provision for common gas pipeline',
+        'Generator/battery backup for lifts & common lights',
+        'Latest firefighting system',
+        'Pedestrian gate with ramp & stairs',
+        'Designer glass panel railings for all balconies',
+        'Rainwater harvesting & vermiculture systems'
       ]
     }
   ];
