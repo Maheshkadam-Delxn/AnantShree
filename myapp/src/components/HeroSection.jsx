@@ -1,5 +1,5 @@
 'use client';
-
+import building from "../../public/img/DAY 002.jpg"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className={`w-full h-[120%] transition-transform duration-1000 ease-out ${scrolled ? 'scale-105' : 'scale-100'}`}>
           <Image
-            src="/hero-background.jpg" // Replace with your actual image path
+            src={building} // Replace with your actual image path
             alt="Premium Residences in Kothrud"
             fill
             priority
@@ -45,7 +45,7 @@ const HeroSection = () => {
       </div>
       
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-center text-center px-4 md:px-8">
+      <div className="relative h-full flex flex-col items-center justify-center  text-center px-4 md:px-8 mt-12">
         <div className="max-w-5xl">
           {/* Elegant Accent */}
           <div className="mb-6 flex justify-center items-center">
@@ -101,13 +101,6 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-white/70 text-xs mb-2 tracking-wider">SCROLL DOWN</span>
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-          <div className="w-1 h-2 bg-white/70 rounded-full animate-scroll-indicator"></div>
-        </div>
-      </div>
     </div>
   );
 };

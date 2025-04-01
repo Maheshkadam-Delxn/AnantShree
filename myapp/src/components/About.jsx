@@ -4,11 +4,11 @@ import Image from 'next/image';
 const AboutProject = () => {
   // Sample image paths - replace with your actual images
   const images = [
-    '/images/project-image-1.jpg',
-    '/images/project-image-2.jpg',
-    '/images/project-image-3.jpg',
-    '/images/project-image-4.jpg',
-    '/images/project-image-5.jpg',
+    '/img/interior.jpg',
+    '/img/building.jpg',
+    '/img/terres.jpg',
+    '/img/interior.jpg',
+    // '/img/interior.jpg',
   ];
 
   return (
