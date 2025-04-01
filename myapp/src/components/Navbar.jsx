@@ -34,8 +34,8 @@ const Navbar = () => {
               <Image 
                 src={logo} 
                 alt="Kher Group + Anantshree" 
-                width={180} 
-                height={60} 
+                width={1920} 
+                height={1080} 
                 className="h-12 w-auto"
                 priority
               />
@@ -76,9 +76,12 @@ const Navbar = () => {
             </svg>
             9156767878
           </a>
-          <a href="/contact" className="bg-[#d4af37] hover:bg-[#b8960d] text-white px-6 py-2 rounded-md font-medium transition-colors shadow-md">
-            Book a Site Visit
-          </a>
+          <a href="/document.pdf" download="document.pdf">
+  <button className="bg-[#d4af37] hover:bg-[#b8960d] text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md text-center">
+    <span>Download Brochure</span>
+   
+  </button>
+</a>
         </div>
 
         {/* Mobile menu button */}
@@ -125,9 +128,12 @@ const Navbar = () => {
               </svg>
               9156767878
             </a>
-            <a href="/contact" className="bg-[#d4af37] hover:bg-[#b8960d] text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md text-center">
-              Book a Site Visit
-            </a>
+            <a href="/document.pdf" download="document.pdf">
+  <button className="bg-[#d4af37] hover:bg-[#b8960d] text-white px-6 py-3 rounded-md font-medium transition-colors shadow-md text-center">
+    <span>Download Brochure</span>
+   
+  </button>
+</a>
           </div>
         </div>
       )}

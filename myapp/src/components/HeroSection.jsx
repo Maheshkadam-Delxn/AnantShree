@@ -77,12 +77,13 @@ const HeroSection = () => {
                 <ArrowRight size={18} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
-            <Link1 href="/download-brochure">
-              <button className="group px-8 py-4 border-2 border-[#d4af37] text-white hover:bg-white/5 rounded-md font-medium transition-all duration-300 shadow-lg w-full sm:w-auto flex items-center justify-center">
-                <span>Download Brochure</span>
-                <ArrowRight size={18} className="ml-2 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all" />
-              </button>
-            </Link1>
+            <a href="/document.pdf" download="document.pdf">
+  <button className="group px-8 py-4 border-2 border-[#d4af37] text-white hover:bg-white/5 rounded-md font-medium transition-all duration-300 shadow-lg w-full sm:w-auto flex items-center justify-center">
+    <span>Download Brochure</span>
+    <ArrowRight size={18} className="ml-2 opacity-0 group-hover:opacity-100 transform translate-x-0 group-hover:translate-x-1 transition-all" />
+  </button>
+</a>
+
           </div>
           
           {/* Property Features */}

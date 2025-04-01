@@ -6,8 +6,8 @@ const AboutProject = () => {
   const images = [
     '/img/interior.jpg',
     '/img/building.jpg',
-    '/img/terres.jpg',
-    '/img/interior.jpg',
+    '/img/terres.JPG',
+    '/img/interiorr.jpg',
     // '/img/interior.jpg',
   ];
 

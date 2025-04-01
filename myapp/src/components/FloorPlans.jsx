@@ -161,7 +161,7 @@ const FloorPlans = () => {
                 </div>
               </div>
               
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <a
                   href="#download-floorplan"
                   className="inline-flex items-center bg-[#0a3a5a] text-white px-6 py-3 rounded-lg hover:bg-[#0a3a5a]/90 transition-colors duration-300"
@@ -177,7 +177,7 @@ const FloorPlans = () => {
                   <Home size={18} className="mr-2" />
                   <span>Schedule Visit</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

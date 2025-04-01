@@ -85,15 +85,12 @@ const AboutKherGroup = () => {
           <div className="relative min-h-[400px] bg-gray-100 rounded-xl overflow-hidden">
   {/* Using Next.js Image component */}
   <Image
-    src="/img/building.jpg" // Use your actual headquarters image path here
-    alt="Kher Group Headquarters"
+    src="/main/logo..svg" // Use your actual headquarters image path here
+    alt="Kher Group"
     layout="fill"
-    objectFit="cover"
+    objectFit="contain"
     priority
   />
-  <div className="absolute inset-0 bg-gradient-to-t from-[#0a3a5a]/70 to-transparent flex items-end justify-start p-6">
-    <p className="text-white font-medium text-xl">Kher Group Headquarters</p>
-  </div>
 </div>
         </div>
 
