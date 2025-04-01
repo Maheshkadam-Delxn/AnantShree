@@ -223,7 +223,7 @@ const GallerySection = () => {
         </div>
         
         {/* Additional Information - Hide in fullscreen mode */}
-        {!isFullscreen && (
+        {/* {!isFullscreen && (
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { title: "Virtual Tour Available", description: "Experience our property from the comfort of your home with our immersive virtual tour" },
@@ -239,7 +239,7 @@ const GallerySection = () => {
               </div>
             ))}
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

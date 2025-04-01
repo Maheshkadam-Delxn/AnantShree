@@ -99,7 +99,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white py-4 px-4 shadow-lg">
+        <div className="lg:hidden bg-[#1C1B29] py-4 px-4 shadow-lg">
           <div className="flex flex-col space-y-4">
             <Link to="home" smooth={true} className="block text-[white] hover:text-[#DBB850] font-medium transition-colors py-2">
               Home

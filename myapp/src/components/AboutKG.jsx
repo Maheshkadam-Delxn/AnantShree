@@ -107,7 +107,7 @@ redefined urban living for over two decades.
         </div>
 
         {/* Collaborating for Excellence Section */}
-        <div className="mb-24">
+        {/* <div className="mb-24">
           <div className="text-center mb-16">
             <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Together We Build Better</span>
             <h3 className="text-3xl font-light text-[#0a3a5a] mt-3 mb-6">Collaborating for Excellence</h3>
@@ -163,7 +163,7 @@ redefined urban living for over two decades.
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Legacy and Achievements */}
      

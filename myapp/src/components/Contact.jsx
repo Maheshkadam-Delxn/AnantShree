@@ -238,7 +238,7 @@ const ContactUs = () => {
         </div>
         
         {/* Help Section */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { title: "Sales Inquiries", description: "Interested in our properties? Our sales team is ready to assist you.", email: "sales@anantshree.co.in" },
             { title: "Customer Support", description: "Current customers can reach our dedicated support team for any assistance.", email: "support@anantshree.co.in" },
@@ -259,7 +259,7 @@ const ContactUs = () => {
               </a>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
