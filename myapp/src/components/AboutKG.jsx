@@ -5,11 +5,11 @@ import Image from 'next/image';
 const AboutKherGroup = () => {
   // Group companies data
   const groupCompanies = [
-    { id: 1, name: "Kher Realty", logo: "/images/logos/kher-realty.png" },
-    { id: 2, name: "Kher Constructions", logo: "/images/logos/kher-constructions.png" },
-    { id: 3, name: "Kher Hospitality", logo: "/images/logos/kher-hospitality.png" },
-    { id: 4, name: "Kher Ventures", logo: "/images/logos/kher-ventures.png" },
-    { id: 5, name: "Kher Foundation", logo: "/images/logos/kher-foundation.png" }
+    { id: 1, name: "Kher Realty", logo: "/group/5.jpg" },
+    { id: 2, name: "Kher Constructions", logo: "/group/4.jpg" },
+    { id: 3, name: "Kher Hospitality", logo: "/group/3.jpg" },
+    { id: 4, name: "Kher Ventures", logo: "/group/2.jpg"},
+    { id: 5, name: "Kher Foundation", logo: "/group/one.jpg" }
   ];
 
   // Achievements data
@@ -211,25 +211,30 @@ redefined urban living for over two decades.
         
 
         {/* Group Companies Logos */}
-        <div>
-          <div className="text-center mb-16">
-            <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Our Family of Companies</span>
-            <h3 className="text-3xl font-light text-[#0a3a5a] mt-3 mb-6">Group Companies</h3>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {groupCompanies.map((company) => (
-              <div key={company.id} className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center justify-center hover:shadow-md transition-all duration-300 h-32 border border-gray-50">
-                {/* This would be your actual Image component */}
-                <div className="w-16 h-16 bg-[#f5f7f9] rounded-full flex items-center justify-center mb-4">
-                  <div className="w-8 h-0.5 bg-[#d4af37]"></div>
-                </div>
-                <p className="text-[#0a3a5a] font-medium text-center">{company.name}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="container mx-auto px-4 py-8 md:py-16">
+  <div className="text-center mb-8 md:mb-16">
+    <span className="text-xs sm:text-sm text-[#d4af37] uppercase tracking-widest font-medium">Our Family of Companies</span>
+    <h3 className="text-2xl sm:text-3xl font-light text-[#0a3a5a] mt-2 md:mt-3 mb-4 md:mb-6">Group Companies</h3>
+    <div className="w-16 md:w-20 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-6 md:mb-10"></div>
+  </div>
+  
+  <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-5 gap-14 md:gap-6 lg:gap-8">
+    {groupCompanies.map((company) => (
+      <div 
+        key={company.id} 
+        className="p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center transition-all duration-300 h-24 sm:h-28 md:h-32 border border-gray-50 hover:shadow-md"
+      >
+        <Image 
+          src={company.logo} 
+          alt={company.name} 
+          width={1920} 
+          height={1080} 
+          className="w-full max-w-40 md:max-w-56 lg:max-w-72 object-contain p-1 md:p-2" 
+        />
+      </div>
+    ))}
+  </div>
+</div>
 
         {/* Call to Action */}
         {/* <div className="mt-24 bg-gradient-to-r from-[#0a3a5a] to-[#0a3a5a]/90 rounded-xl overflow-hidden">
