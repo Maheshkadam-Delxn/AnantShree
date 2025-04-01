@@ -1,5 +1,5 @@
 'use client';
-
+import logo from "../../public/main/logo..svg"
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+      isScrolled ? 'bg-white shadow-md py-2' : 'bg-white py-4'
     }`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
@@ -32,7 +32,7 @@ const Navbar = () => {
           <Link href="/">
             <div className="cursor-pointer">
               <Image 
-                src="/logo.png" 
+                src={logo} 
                 alt="Kher Group + Anantshree" 
                 width={180} 
                 height={60} 
