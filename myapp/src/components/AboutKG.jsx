@@ -230,7 +230,7 @@ const AboutKherGroup = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-24 bg-gradient-to-r from-[#0a3a5a] to-[#0a3a5a]/90 rounded-xl overflow-hidden">
+        {/* <div className="mt-24 bg-gradient-to-r from-[#0a3a5a] to-[#0a3a5a]/90 rounded-xl overflow-hidden">
           <div className="px-8 py-12 text-center">
             <h3 className="text-2xl font-light text-white mb-4">Interested in partnering with us?</h3>
             <p className="text-white/80 max-w-2xl mx-auto mb-8">
@@ -243,7 +243,7 @@ const AboutKherGroup = () => {
               <span>Connect With Us</span>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

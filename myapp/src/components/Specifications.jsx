@@ -226,7 +226,7 @@ const SpecificationsSection = () => {
         </div>
         
         {/* Call to Action */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <a
             href="#schedule-visit"
             className="inline-flex items-center bg-[#0a3a5a] text-white px-8 py-4 rounded-lg hover:bg-[#0a3a5a]/90 transition-colors duration-300"
@@ -240,7 +240,7 @@ const SpecificationsSection = () => {
           >
             <span>Download Brochure</span>
           </a>
-        </div>
+        </div> */}
       </div>
     </section>
   );
