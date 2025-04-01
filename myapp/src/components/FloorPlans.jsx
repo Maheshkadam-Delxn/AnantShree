@@ -56,7 +56,7 @@ const FloorPlans = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-white to-gray-50 font-['Montserrat',sans-serif]">
+    <section name="floorplan" className="py-24 px-6 bg-gradient-to-br from-white to-gray-50 font-['Montserrat',sans-serif]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="mb-16 text-center">

@@ -18,7 +18,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen font-['Montserrat',sans-serif]">
+    <div name="home" className="relative w-full h-screen font-['Montserrat',sans-serif]">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 overflow-hidden">
         <div className={`w-full h-[120%] transition-transform duration-1000 ease-out ${scrolled ? 'scale-105' : 'scale-100'}`}>

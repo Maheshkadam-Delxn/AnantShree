@@ -1,9 +1,9 @@
 'use client';
 import logo from "../../public/main/logo..svg"
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Link1 from 'next/link';
 import Image from 'next/image';
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
-          <Link href="/">
+          <Link1 href="/">
             <div className="cursor-pointer">
               <Image 
                 src={logo} 
@@ -40,30 +40,30 @@ const Navbar = () => {
                 priority
               />
             </div>
-          </Link>
+          </Link1>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-8">
-          <Link href="/" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="home" smooth={true} className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             Home
           </Link>
-          <Link href="/about" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="about" smooth={true} className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             About
           </Link>
-          <Link href="/amenities" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="amenities" smooth={true}  className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             Amenities
           </Link>
-          <Link href="/specifications" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="specs" smooth={true} className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             Specifications
           </Link>
-          <Link href="/location" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="location" smooth={true} className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             Location
           </Link>
-          <Link href="/gallery" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="gallery" smooth={true}  className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             Gallery
           </Link>
-          <Link href="/contact" className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
+          <Link to="contact" smooth={true} className="text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors">
             Contact
           </Link>
         </div>
@@ -98,25 +98,25 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-white py-4 px-4 shadow-lg">
           <div className="flex flex-col space-y-4">
-            <Link href="/" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="home" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               Home
             </Link>
-            <Link href="/about" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="about" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               About
             </Link>
-            <Link href="/amenities" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="amenities" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               Amenities
             </Link>
-            <Link href="/specifications" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="specs" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               Specifications
             </Link>
-            <Link href="/location" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="location" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               Location
             </Link>
-            <Link href="/gallery" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="gallery" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               Gallery
             </Link>
-            <Link href="/contact" className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
+            <Link to="contact" smooth={true} className="block text-[#1a365d] hover:text-[#d4af37] font-medium transition-colors py-2">
               Contact
             </Link>
             <a href="tel:9156767878" className="flex items-center text-[#1a365d] font-medium py-2">

@@ -15,7 +15,7 @@ const LocationAdvantage = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-white to-gray-50 font-['Montserrat',sans-serif]">
+    <section name="location" className="py-24 px-6 bg-gradient-to-br from-white to-gray-50 font-['Montserrat',sans-serif]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 text-center">
           <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Strategic Location</span>
