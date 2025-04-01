@@ -15,12 +15,12 @@ export default function Home() {
     <HeroSection/>
     <Amenties/>
     <About/>
-    <LocationAdvantage/>
     <FloorPlans/>
     
     <Specifications/>
     <Gallery/>
     <AboutKG/>
+    <LocationAdvantage/>
     <Contact/>
    </>
   );
