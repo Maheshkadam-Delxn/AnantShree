@@ -1,22 +1,24 @@
 "use client"
 import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Youtube, ArrowRight, Mail, Phone } from 'lucide-react';
+import Link1 from 'next/link';
+import { Link } from "react-scroll";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
-  // Quick links configuration
+  // Quick links configuration - using react-scroll for same-page navigation
   const quickLinks = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Floor Plans", href: "/floor-plans" },
-    { label: "Amenities", href: "/amenities" },
-    { label: "Gallery", href: "/gallery" },
-    { label: "Location", href: "/location" },
-    { label: "Contact", href: "/contact" }
+    { label: "Home", id: "home", isScroll: true },
+    { label: "About Us", id: "about", isScroll: true },
+    { label: "Amenities", id: "amenities", isScroll: true },
+    { label: "Specifications", id: "specs", isScroll: true },
+    { label: "Location", id: "location", isScroll: true },
+    { label: "Gallery", id: "gallery", isScroll: true },
+    { label: "Contact", id: "contact", isScroll: true }
   ];
   
-  // Resources links
+  // Resources links - using Next.js Link for page navigation
   const resourceLinks = [
     { label: "Brochure", href: "/brochure" },
     { label: "Payment Plans", href: "/payment-plans" },
@@ -43,12 +45,14 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <div className="mb-6">
               {/* Replace with your actual logo */}
-              <div className="text-white text-2xl font-light flex items-center">
-                <div className="w-8 h-8 rounded-full bg-[#d4af37] flex items-center justify-center mr-3">
-                  <div className="w-4 h-4 bg-[#0a3a5a] rounded-full"></div>
+              <Link1 href="/">
+                <div className="text-white text-2xl font-light flex items-center cursor-pointer">
+                  <div className="w-8 h-8 rounded-full bg-[#d4af37] flex items-center justify-center mr-3">
+                    <div className="w-4 h-4 bg-[#0a3a5a] rounded-full"></div>
+                  </div>
+                  <span>Anantshree</span>
                 </div>
-                <span>Anantshree</span>
-              </div>
+              </Link1>
             </div>
             
             <p className="text-white/70 mb-8 leading-relaxed">
@@ -101,13 +105,23 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-[#d4af37] transition-colors flex items-center"
-                  >
-                    <ArrowRight size={14} className="mr-2 text-[#d4af37]" />
-                    <span>{link.label}</span>
-                  </a>
+                  {link.isScroll ? (
+                    <Link
+                      to={link.id}
+                      smooth={true}
+                      className="text-white/70 hover:text-[#d4af37] transition-colors flex items-center cursor-pointer"
+                    >
+                      <ArrowRight size={14} className="mr-2 text-[#d4af37]" />
+                      <span>{link.label}</span>
+                    </Link>
+                  ) : (
+                    <Link1 href={link.href || "/"}>
+                      <div className="text-white/70 hover:text-[#d4af37] transition-colors flex items-center cursor-pointer">
+                        <ArrowRight size={14} className="mr-2 text-[#d4af37]" />
+                        <span>{link.label}</span>
+                      </div>
+                    </Link1>
+                  )}
                 </li>
               ))}
             </ul>
@@ -121,13 +135,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {resourceLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-white/70 hover:text-[#d4af37] transition-colors flex items-center"
-                  >
-                    <ArrowRight size={14} className="mr-2 text-[#d4af37]" />
-                    <span>{link.label}</span>
-                  </a>
+                  <Link1 href={link.href}>
+                    <div className="text-white/70 hover:text-[#d4af37] transition-colors flex items-center cursor-pointer">
+                      <ArrowRight size={14} className="mr-2 text-[#d4af37]" />
+                      <span>{link.label}</span>
+                    </div>
+                  </Link1>
                 </li>
               ))}
             </ul>
@@ -164,15 +177,21 @@ const Footer = () => {
           </p>
           
           <div className="flex space-x-6">
-            <a href="/privacy-policy" className="text-white/70 text-sm hover:text-[#d4af37] transition-colors">
-              Privacy Policy
-            </a>
-            <a href="/terms-conditions" className="text-white/70 text-sm hover:text-[#d4af37] transition-colors">
-              Terms & Conditions
-            </a>
-            <a href="/sitemap" className="text-white/70 text-sm hover:text-[#d4af37] transition-colors">
-              Sitemap
-            </a>
+            <Link1 href="/privacy-policy">
+              <div className="text-white/70 text-sm hover:text-[#d4af37] transition-colors cursor-pointer">
+                Privacy Policy
+              </div>
+            </Link1>
+            <Link1 href="/terms-conditions">
+              <div className="text-white/70 text-sm hover:text-[#d4af37] transition-colors cursor-pointer">
+                Terms & Conditions
+              </div>
+            </Link1>
+            <Link1 href="/sitemap">
+              <div className="text-white/70 text-sm hover:text-[#d4af37] transition-colors cursor-pointer">
+                Sitemap
+              </div>
+            </Link1>
           </div>
         </div>
       </div>
