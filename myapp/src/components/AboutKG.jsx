@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import { Award, Users, Building, Calendar, Target, ArrowRight } from 'lucide-react';
-
+import Image from 'next/image';
 const AboutKherGroup = () => {
   // Group companies data
   const groupCompanies = [
@@ -83,11 +83,18 @@ const AboutKherGroup = () => {
           </div>
 
           <div className="relative min-h-[400px] bg-gray-100 rounded-xl overflow-hidden">
-            {/* This would be your actual Image component */}
-            <div className="absolute inset-0 bg-[#f5f7f9] flex items-center justify-center">
-              <p className="text-[#0a3a5a] font-medium">Kher Group Headquarters Image</p>
-            </div>
-          </div>
+  {/* Using Next.js Image component */}
+  <Image
+    src="/img/building.jpg" // Use your actual headquarters image path here
+    alt="Kher Group Headquarters"
+    layout="fill"
+    objectFit="cover"
+    priority
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-[#0a3a5a]/70 to-transparent flex items-end justify-start p-6">
+    <p className="text-white font-medium text-xl">Kher Group Headquarters</p>
+  </div>
+</div>
         </div>
 
         {/* Collaborating for Excellence Section */}
@@ -150,37 +157,56 @@ const AboutKherGroup = () => {
         </div>
 
         {/* Legacy and Achievements */}
-        <div className="mb-24">
-          <div className="text-center mb-16">
-            <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Our Proud Journey</span>
-            <h3 className="text-3xl font-light text-[#0a3a5a] mt-3 mb-6">Legacy and Achievements</h3>
-            <div className="w-20 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#0a3a5a] to-[#d4af37]/30"></div>
-            
-            {/* Achievement items */}
-            <div className="space-y-16 relative">
-              {achievements.map((achievement, index) => (
-                <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
-                  <div className={`w-full md:w-1/2 mb-8 md:mb-0 ${index % 2 === 0 ? 'md:pr-12 text-right' : 'md:pl-12 text-left'}`}>
-                    <span className="text-sm text-[#d4af37] font-medium">{achievement.year}</span>
-                    <h4 className="text-xl font-medium text-[#0a3a5a] mb-2">{achievement.title}</h4>
-                    <p className="text-gray-600">{achievement.description}</p>
-                  </div>
-                  
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full border-4 border-white bg-[#d4af37] flex items-center justify-center z-10">
-                    <Award size={16} className="text-white" />
-                  </div>
-                  
-                  <div className="w-full md:w-1/2"></div>
-                </div>
-              ))}
+     
+        <div className="mb-24 px-4 sm:px-6">
+      <div className="text-center mb-16">
+        <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Our Proud Journey</span>
+        <h3 className="text-3xl font-light text-[#0a3a5a] mt-3 mb-6">Legacy and Achievements</h3>
+        <div className="w-20 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
+      </div>
+      
+      <div className="relative">
+        {/* Timeline line - hidden on mobile, visible on md screens and up */}
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-[#0a3a5a] to-[#d4af37]/30"></div>
+        
+        {/* Timeline line - visible only on mobile, positioned on left side */}
+        <div className="md:hidden absolute left-4 top-0 h-full w-0.5 bg-gradient-to-b from-[#0a3a5a] to-[#d4af37]/30"></div>
+        
+        {/* Achievement items */}
+        <div className="space-y-16 relative">
+          {achievements.map((achievement, index) => (
+            <div key={index} className={`flex flex-col md:items-center ${
+              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            }`}>
+              {/* Content section */}
+              <div className={`
+                w-full pl-12 md:pl-0 
+                md:w-1/2 
+                ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}
+              `}>
+                <span className="text-sm text-[#d4af37] font-medium">{achievement.year}</span>
+                <h4 className="text-xl font-medium text-[#0a3a5a] mb-2">{achievement.title}</h4>
+                <p className="text-gray-600">{achievement.description}</p>
+              </div>
+              
+              {/* Timeline dot for desktop */}
+              <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 rounded-full border-4 border-white bg-[#d4af37] items-center justify-center z-10">
+                <Award size={16} className="text-white" />
+              </div>
+              
+              {/* Timeline dot for mobile */}
+              <div className="md:hidden absolute left-4 transform -translate-x-1/2 w-8 h-8 rounded-full border-3 border-white bg-[#d4af37] flex items-center justify-center z-10">
+                <Award size={12} className="text-white" />
+              </div>
+              
+              {/* Empty div for desktop layout */}
+              <div className="hidden md:block w-full md:w-1/2"></div>
             </div>
-          </div>
+          ))}
         </div>
+      </div>
+    </div>
+        
 
         {/* Group Companies Logos */}
         <div>

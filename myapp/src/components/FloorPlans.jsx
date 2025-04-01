@@ -15,7 +15,7 @@ const FloorPlans = () => {
       carpetArea: "825 sq.ft.",
       superArea: "1050 sq.ft.",
       price: "₹95L onwards",
-      image: "/images/floor-plans/2bhk-elegance.jpg",
+      image: "/img/interior.jpg",
       dimensions: [
         { room: "Master Bedroom", size: "12' x 14'" },
         { room: "Second Bedroom", size: "10' x 12'" },
@@ -26,47 +26,14 @@ const FloorPlans = () => {
         { room: "Common Bathroom", size: "5' x 8'" }
       ]
     },
-    royale: {
-      title: "Royale",
-      type: "2 BHK",
-      carpetArea: "950 sq.ft.",
-      superArea: "1175 sq.ft.",
-      price: "₹1.05Cr onwards",
-      image: "/images/floor-plans/2bhk-royale.jpg",
-      dimensions: [
-        { room: "Master Bedroom", size: "14' x 16'" },
-        { room: "Second Bedroom", size: "12' x 12'" },
-        { room: "Living & Dining", size: "18' x 20'" },
-        { room: "Kitchen", size: "9' x 11'" },
-        { room: "Balcony", size: "6' x 12'" },
-        { room: "Master Bathroom", size: "7' x 9'" },
-        { room: "Common Bathroom", size: "6' x 8'" }
-      ]
-    },
-    grande: {
-      title: "Grande",
-      type: "2 BHK",
-      carpetArea: "1075 sq.ft.",
-      superArea: "1290 sq.ft.",
-      price: "₹1.15Cr onwards",
-      image: "/images/floor-plans/2bhk-grande.jpg",
-      dimensions: [
-        { room: "Master Bedroom", size: "14' x 16'" },
-        { room: "Second Bedroom", size: "12' x 14'" },
-        { room: "Living & Dining", size: "20' x 22'" },
-        { room: "Kitchen", size: "10' x 12'" },
-        { room: "Balcony", size: "8' x 12'" },
-        { room: "Master Bathroom", size: "8' x 10'" },
-        { room: "Common Bathroom", size: "6' x 9'" }
-      ]
-    },
+  
     majestic: {
       title: "Majestic",
       type: "3 BHK",
       carpetArea: "1350 sq.ft.",
       superArea: "1625 sq.ft.",
       price: "₹1.45Cr onwards",
-      image: "/images/floor-plans/3bhk-majestic.jpg",
+      image: "/img/interiorr.jpg",
       dimensions: [
         { room: "Master Bedroom", size: "16' x 18'" },
         { room: "Second Bedroom", size: "12' x 14'" },
@@ -85,8 +52,6 @@ const FloorPlans = () => {
   // Tabs configuration
   const tabs = [
     { id: 'elegance', label: 'Elegance', type: '2 BHK' },
-    { id: 'royale', label: 'Royale', type: '2 BHK' },
-    { id: 'grande', label: 'Grande', type: '2 BHK' },
     { id: 'majestic', label: 'Majestic', type: '3 BHK' },
   ];
 
@@ -134,16 +99,15 @@ const FloorPlans = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5">
             {/* Floor Plan Image - Takes up 3/5 of the space on desktop */}
             <div className="lg:col-span-3 relative min-h-[400px] lg:min-h-[600px] bg-gray-50">
-              {/* Replace this with your actual floor plan image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* This would be your actual Image component */}
-                <div className="w-full h-full bg-[#f5f7f9] flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <Square size={64} className="text-[#d4af37]/30 mx-auto mb-4" />
-                    <p className="text-[#0a3a5a] font-medium">{floorPlans[activeTab].title} Floor Plan</p>
-                    <p className="text-sm text-gray-500 mt-2">{floorPlans[activeTab].type} Configuration</p>
-                  </div>
-                </div>
+              {/* Using the image from floorPlans data */}
+              <div className="relative w-full h-full">
+                <Image 
+                  src={floorPlans[activeTab].image}
+                  alt={`${floorPlans[activeTab].title} Floor Plan`}
+                  layout="fill"
+                  objectFit="contain"
+                  priority
+                />
               </div>
               
               {/* Image Caption */}
