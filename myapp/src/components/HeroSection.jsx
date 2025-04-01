@@ -19,15 +19,21 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-[#1C1B29] text-white py-8 md:py-16 px-4 md:px-6 w-full min-h-screen flex items-center justify-center mt-12">
-      <div className="w-full max-w-6xl mx-auto text-center p-4 md:p-12">
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+    <section 
+      className="relative text-white py-8 md:py-10 px-4 md:px-6 w-full min-h-screen flex items-center justify-center mt-12 bg-cover bg-center"
+      style={{ backgroundImage: 'url("/bg.jpg")' }}
+    >
+      {/* Optional overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      
+      <div className="w-full max-w-7xl mx-auto text-center p-4 md:p-12 relative z-10">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-3 md:gap-0">
           <h2 className="text-2xl md:text-3xl font-light order-2 md:order-1 mt-6 md:mt-0">
             <span className="text-yellow-500">An Exclusive Address in</span> <br />
             the Heart of Kothrud
           </h2>
           <Image
-            src={"/main/logo..svg"}
+            src={"/kg-white.svg"}
             width={1920}
             height={1080}
             className="h-16 md:h-24 w-auto order-1 md:order-2"
@@ -43,13 +49,13 @@ const HeroSection = () => {
             alt="Anantshree Logo" 
             className="w-1/2 md:w-1/4 mb-2" 
           />
-          <p className="text-base md:text-lg mt-3">
+          <p className="text-base md:text-2xl mt-3">
             Premium 2 & 3 BHK <br />
             <span className="text-yellow-500">Residences in Kothrud</span>
           </p>
         </div>
         
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12">
           <Link to="floorplan" smooth={true}>
             <button className="cursor-pointer group px-6 md:px-8 py-3 md:py-4 bg-[#d4af37] hover:bg-[#c9a431] text-white rounded-md font-medium transition-all duration-300 shadow-lg w-full sm:w-auto flex items-center justify-center">
               <span>View Floor Plans</span>
@@ -70,7 +76,7 @@ const HeroSection = () => {
             { icon: <MapPin size={18} />, label: "Prime Location" },
             { icon: <Home size={18} />, label: "Smart Homes" }
           ].map((item, index) => (
-            <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm px-3 md:px-4 py-2 rounded-full">
+            <div key={index} className="flex items-center bg-black/30 backdrop-blur-sm px-3 md:px-4 py-2 rounded-full">
               <span className="text-[#d4af37] mr-2">{item.icon}</span>
               <span className="text-white text-xs md:text-sm">{item.label}</span>
             </div>
