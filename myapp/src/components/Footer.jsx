@@ -3,7 +3,7 @@ import React from 'react';
 import { Facebook, Instagram, Twitter, Linkedin, Youtube, ArrowRight, Mail, Phone } from 'lucide-react';
 import Link1 from 'next/link';
 import { Link } from "react-scroll";
-
+import Image from 'next/image';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -46,11 +46,8 @@ const Footer = () => {
           <div className="mb-6">
             {/* Replace with your actual logo */}
             <Link1 href="/">
-              <div className="text-white text-2xl font-light flex items-center cursor-pointer">
-                <div className="w-8 h-8 rounded-full bg-[#d4af37] flex items-center justify-center mr-3">
-                  <div className="w-4 h-4 bg-[#0a3a5a] rounded-full"></div>
-                </div>
-                <span>Anantshree</span>
+              <div className="text-white text-2xl font-light flex flex-col items-center cursor-pointer">
+                <Image src="/logo2.svg" width={1920} height={1080} className='w-56 h-56' />
               </div>
             </Link1>
           </div>
