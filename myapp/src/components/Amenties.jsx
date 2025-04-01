@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { Shield, Droplets, Tree, Building, Camera, ArrowUp } from 'lucide-react';
+import { Shield, Droplets, TreePalm , Building, Camera, ArrowUp } from 'lucide-react';
 
 const AmenitiesSection = () => {
   // State for active category
@@ -39,7 +39,7 @@ const AmenitiesSection = () => {
         description: "State-of-the-art rainwater collection system that conserves water resources while reducing utility costs."
       },
       {
-        icon: <Tree size={24} />,
+        icon: <TreePalm  size={24} />,
         title: "Eco-Friendly Features",
         description: "Energy-efficient design with solar panels, LED lighting throughout common areas, and sustainable construction materials."
       }

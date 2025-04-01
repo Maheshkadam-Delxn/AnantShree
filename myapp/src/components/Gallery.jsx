@@ -15,41 +15,40 @@ const GallerySection = () => {
     { id: 'bedroom', label: 'Bedroom' },
     { id: 'kitchen', label: 'Kitchen' },
     { id: 'workspace', label: 'Workspace' },
-    { id: 'exterior', label: 'Exterior' },
     { id: 'common', label: 'Common Areas' }
   ];
   
-  // Gallery images configuration (placeholder data)
+  // Gallery images configuration with your image URLs
   const galleryImages = {
     living: [
-      { url: "/api/placeholder/1200/800", title: "Spacious Living Room with Floor-to-ceiling Windows" },
-      { url: "/api/placeholder/1200/800", title: "Elegant Living Space with Premium Finishes" },
-      { url: "/api/placeholder/1200/800", title: "Modern Living Area with Designer Furniture" }
+      { url: "/floor-plan/living-room1.jpg", title: "Spacious Living Room with Floor-to-ceiling Windows" },
+      { url: "/floor-plan/living-room2.jpg", title: "Elegant Living Space with Premium Finishes" },
+      { url: "/floor-plan/living-room3.jpg", title: "Modern Living Area with Designer Furniture" }
     ],
     bedroom: [
-      { url: "/api/placeholder/1200/800", title: "Luxurious Master Bedroom with Walk-in Closet" },
-      { url: "/api/placeholder/1200/800", title: "Serene Guest Bedroom with Natural Lighting" },
-      { url: "/api/placeholder/1200/800", title: "Cozy Bedroom with Premium Wood Flooring" }
+      { url: "/floor-plan/bedroom-1.jpg", title: "Luxurious Master Bedroom with Walk-in Closet" },
+      { url: "/floor-plan/bedroom-2.jpg", title: "Serene Guest Bedroom with Natural Lighting" },
+      { url: "/floor-plan/bedroom-3.jpg", title: "Cozy Bedroom with Premium Wood Flooring" }
     ],
     kitchen: [
-      { url: "/api/placeholder/1200/800", title: "Gourmet Kitchen with Premium Appliances" },
-      { url: "/api/placeholder/1200/800", title: "Modular Kitchen with Elegant Stone Countertops" },
-      { url: "/api/placeholder/1200/800", title: "Open-concept Kitchen with Breakfast Bar" }
+      { url: "/floor-plan/kitchen1.jpg", title: "Gourmet Kitchen with Premium Appliances" },
+      { url: "/floor-plan/kitchen2.jpg", title: "Modular Kitchen with Elegant Stone Countertops" },
+      { url: "/floor-plan/kitchen3.jpg", title: "Open-concept Kitchen with Breakfast Bar" }
     ],
     workspace: [
-      { url: "/api/placeholder/1200/800", title: "Dedicated Home Office Space with Built-in Storage" },
-      { url: "/api/placeholder/1200/800", title: "Functional Workspace with High-speed Connectivity" },
-      { url: "/api/placeholder/1200/800", title: "Ergonomic Work Area with Natural Lighting" }
+      { url: "/floor-plan/workspace1.jpg", title: "Dedicated Home Office Space with Built-in Storage" },
+      { url: "/floor-plan/workspace2.jpg", title: "Functional Workspace with High-speed Connectivity" },
+      { url: "/floor-plan/workspace3.jpg", title: "Ergonomic Work Area with Natural Lighting" }
     ],
     exterior: [
-      { url: "/api/placeholder/1200/800", title: "Modern Building Façade with Contemporary Architecture" },
-      { url: "/api/placeholder/1200/800", title: "Stunning Exterior with Landscaped Gardens" },
-      { url: "/api/placeholder/1200/800", title: "Grand Entrance with Water Features" }
+      { url: "/floor-plan/exterior1.jpg", title: "Modern Building Facade with Elegant Design" },
+      { url: "/floor-plan/exterior2.jpg", title: "Landscaped Gardens and Outdoor Spaces" },
+      { url: "/floor-plan/exterior3.jpg", title: "Panoramic View of the Property" }
     ],
     common: [
-      { url: "/api/placeholder/1200/800", title: "Luxurious Lobby with Concierge Services" },
-      { url: "/api/placeholder/1200/800", title: "State-of-the-art Fitness Center" },
-      { url: "/api/placeholder/1200/800", title: "Rooftop Terrace with Panoramic Views" }
+      { url: "/floor-plan/common-room1.jpg", title: "Luxurious Lobby with Concierge Services" },
+      { url: "/floor-plan/common-room2.jpg", title: "State-of-the-art Fitness Center" },
+      { url: "/floor-plan/common-room3.jpg", title: "Rooftop Terrace with Panoramic Views" }
     ]
   };
 
@@ -124,17 +123,14 @@ const GallerySection = () => {
         <div className={`relative rounded-xl overflow-hidden ${isFullscreen ? 'h-full' : 'shadow-lg'}`}>
           {/* Main Image */}
           <div className="relative aspect-[16/9] bg-gray-100">
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
-              {/* This would be your actual Image component */}
-              <div className="w-full h-full bg-[#f5f7f9] flex items-center justify-center">
-                <div className="text-center">
-                  <Square size={64} className="text-[#d4af37]/30 mx-auto mb-4" />
-                  <p className="text-[#0a3a5a] font-medium">
-                    {galleryImages[activeCategory][currentSlide].title}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Image
+              src={galleryImages[activeCategory][currentSlide].url}
+              alt={galleryImages[activeCategory][currentSlide].title}
+              fill
+              className="object-cover"
+              quality={isFullscreen ? 100 : 85}
+              priority
+            />
             
             {/* Navigation Arrows */}
             <button 
@@ -179,9 +175,13 @@ const GallerySection = () => {
                     transition-all duration-300
                   `}
                 >
-                  <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
-                    <Square size={24} className="text-[#d4af37]/30" />
-                  </div>
+                  <Image
+                    src={image.url}
+                    alt={image.title}
+                    fill
+                    className="object-cover"
+                    sizes="100px"
+                  />
                 </div>
               ))}
             </div>
