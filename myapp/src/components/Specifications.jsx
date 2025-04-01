@@ -133,7 +133,7 @@ const SpecificationsSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-white font-['Montserrat',sans-serif]">
+    <section name="specs" className="py-24 px-6 bg-white font-['Montserrat',sans-serif]">
       <div className="max-w-5xl mx-auto">
         {/* Section Header */}
         <div className="mb-16 text-center">

@@ -77,7 +77,7 @@ const GallerySection = () => {
   };
 
   return (
-    <section className={`py-24 px-6 bg-gradient-to-br from-gray-50 to-white font-['Montserrat',sans-serif] ${isFullscreen ? 'fixed inset-0 z-50 bg-black flex items-center justify-center' : ''}`}>
+    <section name="gallery" className={`py-24 px-6 bg-gradient-to-br from-gray-50 to-white font-['Montserrat',sans-serif] ${isFullscreen ? 'fixed inset-0 z-50 bg-black flex items-center justify-center' : ''}`}>
       <div className={`${isFullscreen ? 'w-full h-full' : 'max-w-7xl mx-auto'}`}>
         
         {/* Section Header - Hide in fullscreen mode */}
