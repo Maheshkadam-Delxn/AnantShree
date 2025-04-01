@@ -72,7 +72,7 @@ const AmenitiesSection = () => {
           <h2 className="text-4xl md:text-5xl font-light text-[#0a3a5a] mt-3 mb-6 leading-tight">
             Project Amenities
           </h2>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-[#1C1B29] to-[#d4af37] mx-auto mb-10"></div>
           
           <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
             Discover a world of luxury and convenience designed to elevate your everyday living experience.
@@ -127,7 +127,7 @@ const AmenitiesSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Image Side */}
             <div className="relative min-h-[400px] bg-gray-50">
-              <div className="absolute inset-0 flex items-center justify-center bg-[#0a3a5a]">
+              <div className="absolute inset-0 flex items-center justify-center bg-[#1C1B29]">
                 <div className="text-center p-8">
                   <span className="text-sm text-[#d4af37] uppercase tracking-widest font-medium">Experience Excellence</span>
                   <h3 className="text-3xl font-light text-white mt-3 mb-6">Luxury Living Redefined</h3>

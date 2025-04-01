@@ -41,7 +41,7 @@ const ContactUs = () => {
           <h2 className="text-4xl md:text-5xl font-light text-[#0a3a5a] mt-3 mb-6 leading-tight">
             Contact Us
           </h2>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-[#0a3a5a] to-[#d4af37] mx-auto mb-10"></div>
+          <div className="w-24 h-0.5 bg-gradient-to-r from-[#1C1B29] to-[#d4af37] mx-auto mb-10"></div>
           
           <p className="max-w-3xl mx-auto text-gray-600 text-lg leading-relaxed">
             We're here to answer any questions you may have about our residences.
@@ -128,7 +128,7 @@ const ContactUs = () => {
                     
                     <button
                       type="submit"
-                      className="inline-flex items-center bg-[#0a3a5a] text-white px-6 py-3 rounded-lg hover:bg-[#0a3a5a]/90 transition-colors duration-300"
+                      className="inline-flex items-center bg-[#1C1B29] text-white px-6 py-3 rounded-lg hover:bg-[#1C1B76]/90 transition-colors duration-300"
                     >
                       <Send size={18} className="mr-2" />
                       <span>Send Message</span>
@@ -141,7 +141,7 @@ const ContactUs = () => {
           
           {/* Contact Information - 5 columns */}
           <div className="lg:col-span-5">
-            <div className="bg-[#0a3a5a] rounded-xl shadow-lg overflow-hidden h-full">
+            <div className="bg-[#1C1B29] rounded-xl shadow-lg overflow-hidden h-full">
               <div className="p-8 text-white">
                 <h3 className="text-2xl font-light mb-8">Contact Information</h3>
                 

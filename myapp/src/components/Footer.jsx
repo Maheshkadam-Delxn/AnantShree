@@ -37,7 +37,7 @@ const Footer = () => {
   ];
   
   return (
-    <footer className="bg-[#0a3a5a] font-['Montserrat',sans-serif]">
+    <footer className="bg-[#1C1B29] font-['Montserrat',sans-serif]">
     {/* Main Footer Content */}
     <div className="max-w-7xl mx-auto px-6 py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">

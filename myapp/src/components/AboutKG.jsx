@@ -121,7 +121,7 @@ redefined urban living for over two decades.
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-5">
-                <div className="md:col-span-2 bg-[#0a3a5a] text-white p-8 flex flex-col justify-center">
+                <div className="md:col-span-2 bg-[#1C1B29] text-white p-8 flex flex-col justify-center">
                   <Users size={36} className="text-[#d4af37] mb-4" />
                   <h4 className="text-xl font-light mb-2">Our Collaborative Network</h4>
                   <p className="text-white/80 text-sm">

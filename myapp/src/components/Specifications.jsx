@@ -202,7 +202,7 @@ const SpecificationsSection = () => {
         </div>
         
         {/* Quality Assurance Banner */}
-        <div className="mt-16 bg-gradient-to-r from-[#0a3a5a] to-[#0a3a5a]/90 rounded-xl shadow-lg overflow-hidden">
+        <div className="mt-16 bg-[#1C1B29] rounded-xl shadow-lg overflow-hidden">
           <div className="p-10 text-center">
             <span className="text-[#d4af37] text-sm uppercase tracking-widest font-medium">Our Promise</span>
             <h3 className="text-3xl font-light text-white mt-3 mb-6">Quality Without Compromise</h3>
