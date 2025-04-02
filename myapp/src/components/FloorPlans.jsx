@@ -14,7 +14,7 @@ const FloorPlans = () => {
       type: "2 BHK",
       carpetArea: "700.00 sq.ft.",
       superArea: "700.00 sq.ft.",
-      price: "₹95L onwards",
+      // price: "₹95L onwards",
       image: "/img/interior.jpg",
       dimensions: [
         { room: "Master Bedroom", size: "12'3 x 10'0" },
@@ -30,7 +30,7 @@ const FloorPlans = () => {
       type: "2 BHK",
       carpetArea: "704.00 sq.ft.",
       superArea: "704.00 sq.ft.",
-      price: "₹1.45Cr onwards",
+      // price: "₹1.45Cr onwards",
       image: "/img/interiorr.jpg",
       dimensions: [
         { room: "Master Bedroom", size: "12'3 x 10'0" },
@@ -46,7 +46,7 @@ const FloorPlans = () => {
       type: "2 BHK",
       carpetArea: "751.00 sq.ft.",
       superArea: "751.00 sq.ft.",
-      price: "₹1.45Cr onwards",
+      // price: "₹1.45Cr onwards",
       image: "/img/interiorr.jpg",
       dimensions: [
         { room: "Master Bedroom", size: "12'3 x 10'0" },
@@ -62,7 +62,7 @@ const FloorPlans = () => {
       type: "3 BHK",
       carpetArea: "865.00 sq.ft.",
       superArea: "865.00 sq.ft.",
-      price: "₹1.45Cr onwards",
+      // price: "₹1.45Cr onwards",
       image: "/img/interiorr.jpg",
       dimensions: [
         { room: "Master Bedroom", size: "14'0 x 10'6" },
@@ -146,9 +146,9 @@ const FloorPlans = () => {
                     <h3 className="text-2xl font-light">{floorPlans[activeTab].title}</h3>
                     <p className="text-white/80">{floorPlans[activeTab].type} Premium Configuration</p>
                   </div>
-                  <div className="bg-[#d4af37] text-[#0a3a5a] text-sm font-bold px-4 py-2 rounded">
+                  {/* <div className="bg-[#d4af37] text-[#0a3a5a] text-sm font-bold px-4 py-2 rounded">
                     {floorPlans[activeTab].price}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
